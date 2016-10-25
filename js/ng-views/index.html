@@ -1,0 +1,8 @@
+
+<a data-ui-sref="instaNew">Post New Gram</a>
+<div data-ng-repeat="gram in vm.grams | orderBy:'-created_at'">
+  <a data-ui-sref="instaShow({id: gram.id})"><img ng-src={{gram.photo_url}} ></a>
+  <p>{{gram.author}}</p>
+  <p>{{gram.body}}</p>
+  <a data-ui-sref="instaEdit({id: gram.id})">Edit Gram</a>
+</div>
